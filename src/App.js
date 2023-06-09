@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import { GolbalProvider } from './context/globalState';
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GolbalProvider>
+      App
+        {/* can use the state and the action using usecontext(GlobalContext) hook and sipatching the actions from here */}
+
+      </GolbalProvider>
     </div>
   );
 }
